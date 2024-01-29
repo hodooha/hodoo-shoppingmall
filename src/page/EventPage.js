@@ -14,7 +14,7 @@ const EventPage = () => {
       navigate("/login");
       return;
     }
-    let couponDuration = 30;
+    let couponDuration = 7;
     dispatch(eventActions.getCoupon(event.target.id, couponDuration));
   };
 
@@ -48,7 +48,7 @@ const EventPage = () => {
           <span>&#8251;</span> 회원 구입 시에만 쿠폰 적용이 가능합니다.
         </div>
         <div className="red-color">
-          <span>&#8251;</span> 쿠폰 발급 후 사용기한은 30일입니다.
+          <span>&#8251;</span> 쿠폰 발급 후 사용기한은 7일입니다.
         </div>
 
         <Button
