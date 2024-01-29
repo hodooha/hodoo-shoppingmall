@@ -1,4 +1,4 @@
-# 풀스택 쇼핑몰 웹사이트 만들기 프로젝트 - frontend
+# 풀스택 쇼핑몰 웹사이트 만들기 프로젝트 - front-end
 
 * 데모 웹사이트: https://hodoo-shoppingmall.netlify.app/
 
