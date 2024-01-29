@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Button } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router";
-import { eventAction } from "../action/eventAction";
+import { eventActions } from "../action/eventAction";
 import { ColorRing } from "react-loader-spinner";
 
 const EventPage = () => {
@@ -15,7 +15,7 @@ const EventPage = () => {
       return;
     }
     let couponDuration = 30;
-    dispatch(eventAction.getCoupon(event.target.id, couponDuration));
+    dispatch(eventActions.getCoupon(event.target.id, couponDuration));
   };
 
   if (loading) {

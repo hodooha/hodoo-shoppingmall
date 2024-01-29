@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { cartActions } from "../action/cartAction";
+import { eventActions } from "../action/eventAction";
 import { ColorRing } from "react-loader-spinner";
 import CartProductCard from "../component/CartProductCard";
 import OrderReceipt from "../component/OrderReceipt";
@@ -15,6 +16,7 @@ const CartPage = () => {
 
   useEffect(() => {
     dispatch(cartActions.getCartList());
+    dispatch(eventActions.getCouponList());
   }, []);
 
   if (loading || !cartList) {

@@ -2,7 +2,7 @@ import api from "../utils/api";
 import * as types from "../constants/order.constants";
 import { cartActions } from "./cartAction";
 import { commonUiActions } from "./commonUiAction";
-import { eventAction } from "./eventAction";
+import { eventActions } from "./eventAction";
 
 const createOrder = (data, navigate) => async (dispatch) => {
   try {
@@ -15,7 +15,7 @@ const createOrder = (data, navigate) => async (dispatch) => {
     });
     const { couponId } = data;
     if (couponId) {
-      dispatch(eventAction.deleteCoupon(couponId));
+      dispatch(eventActions.deleteCoupon(couponId));
     }
     dispatch(cartActions.getCartQty());
     navigate("/payment/success");

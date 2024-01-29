@@ -36,7 +36,7 @@ function eventReducer(state = initialState, action) {
       return { ...state, loading: false, error: payload };
 
     case types.GET_COUPON_LIST_FAIL:
-      return { ...state, loading: false, error: payload };
+      return { ...state, loading: false, error: payload, couponList: [] };
 
     default:
       return state;

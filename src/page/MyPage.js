@@ -7,7 +7,7 @@ import OrderStatusCard from "../component/OrderStatusCard";
 import { ColorRing } from "react-loader-spinner";
 import "../style/orderStatus.style.css";
 import CouponTable from "../component/CouponTable";
-import { eventAction } from "../action/eventAction";
+import { eventActions } from "../action/eventAction";
 
 const MyPage = () => {
   const dispatch = useDispatch();
@@ -16,7 +16,7 @@ const MyPage = () => {
 
   useEffect(() => {
     dispatch(orderActions.getOrder());
-    dispatch(eventAction.getCouponList());
+    dispatch(eventActions.getCouponList());
   }, []);
 
   if (loading) {

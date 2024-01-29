@@ -42,4 +42,4 @@ const getCouponList = () => async (dispatch) => {
     dispatch({ type: types.GET_COUPON_LIST_FAIL, payload: err.error });
   }
 };
-export const eventAction = { getCoupon, deleteCoupon, getCouponList };
+export const eventActions = { getCoupon, deleteCoupon, getCouponList };
